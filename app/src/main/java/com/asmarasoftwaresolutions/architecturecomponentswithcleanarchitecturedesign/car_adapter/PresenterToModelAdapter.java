@@ -1,0 +1,4 @@
+package com.asmarasoftwaresolutions.architecturecomponentswithcleanarchitecturedesign.car_adapter;
+
+public class PresenterToModelAdapter {
+}
