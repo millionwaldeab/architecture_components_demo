@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Architecture Components with Clean Architecture Design</string>
+    <string name="get_car">GET CAR</string>
+    <string name="add_car">ADD CAR</string>
+    <string name="cars">CRAS</string>
+</resources>
