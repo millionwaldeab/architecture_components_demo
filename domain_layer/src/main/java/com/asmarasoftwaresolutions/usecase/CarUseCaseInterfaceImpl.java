@@ -6,8 +6,6 @@ import com.asmarasoftwaresolutions.car_repository.CarRepositoryInterface;
 import com.asmarasoftwaresolutions.core.SuccessOrException;
 import com.asmarasoftwaresolutions.domain_adapter.DataToDomainAdapter;
 import com.asmarasoftwaresolutions.model.Car;
-import com.asmarasoftwaresolutions.model.entities.CarEntity;
-
 import java.util.concurrent.Executor;
 
 public class CarUseCaseInterfaceImpl implements CarUseCaseInterface {
@@ -16,7 +14,8 @@ public class CarUseCaseInterfaceImpl implements CarUseCaseInterface {
     private DataToDomainAdapter mDataToDomainAdapter;
     private Executor mExecutor;
 
-    public CarUseCaseInterfaceImpl(CarRepositoryInterface mCarRepository, DataToDomainAdapter mDataToDomainAdapter) {
+    public CarUseCaseInterfaceImpl(Executor executor, CarRepositoryInterface mCarRepository, DataToDomainAdapter mDataToDomainAdapter) {
+        this.mExecutor = executor;
         this.mCarRepository = mCarRepository;
         this.mDataToDomainAdapter = mDataToDomainAdapter;
     }
