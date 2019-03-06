@@ -18,16 +18,7 @@ public class MainActivityViewModel extends ViewModel {
     private DomainToPresenterAdapter mDomainToPresenterAdapter; //this is to convert CarObject to CarModel(in presenter)
 
     private String TAG_MESSAGE = this.getClass().getCanonicalName();
-
-    public MainActivityViewModel() {
-        //zero argument constructor for viewmodel
-    }
-
-    //Constructor of the view model
-    public MainActivityViewModel(CarUseCaseInterface mCarUseCaseInterface, DomainToPresenterAdapter mDomainToDataAdapter) {
-        this.mCarUseCaseInterface = mCarUseCaseInterface;
-        this.mDomainToPresenterAdapter = mDomainToDataAdapter;
-    }
+    
 
     public LiveData<CarModel> getCar(String brand, String year, String type) {
         this.mCarUseCaseInterface.getCar(new SuccessOrException<Car>() {
